@@ -6,7 +6,7 @@ player2_score = 0;
 
 number_1 = document.getElementById("word1").value;
 number_2 = document.getElementById("word2").value;
-number = parseInt(number_1) * parseInt(number_2)
+actual_answer = parseInt(number_1) * parseInt(number_2)
 
 document.getElementById("player1_name").innerHTML = player1_name + ":";
 document.getElementById("player2_name").innerHTML = player2_name + ":";
@@ -28,10 +28,9 @@ function send() {
 
 function check() {
  get_answer = document.getElementById("input_check_box").value;
-answer = number;
-console.log("Answer is" + answer);
+console.log("Answer is" + get_answer);
 
-if (answer == word) {
+if (get_answer == actual_answer) {
     if (answer_turn == "player1") {
         player1_score = player1_score + 1;
         document.getElementById("player1_score").innerHTML=player1_score;
