@@ -18,7 +18,7 @@ document.getElementById("player_question").innerHTML = player1_name;
 document.getElementById("player_answer").innerHTML = player2_name;
 
 function send() {
-    question_word = "<h4 id='word_display'>Q. " + document.getElementById("word1").value;+ "X" +document.getElementById("word2").value; + "</h4>";
+    question_word = "<h4 id='word_display'>Q. " + document.getElementById("word1").value + " X " +document.getElementById("word2").value + "</h4>";
     input_box = "<br>Answer : <input type='number' id='input_check_box'>";
     check_button = "<br><br><button class='btn btn-info' onclick='check()'>Check</button>";
     row = question_word + input_box + check_button;
