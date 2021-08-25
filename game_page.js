@@ -39,6 +39,9 @@ if (get_answer == actual_answer) {
         player2_score = player2_score + 1;
         document.getElementById("player2_score").innerHTML=player2_score;
     }
+ question_turn="player1";
+ answer_turn="player2";
+
 }
 if (question_turn == "player1") {
     question_turn = "player2";
