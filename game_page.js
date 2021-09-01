@@ -23,8 +23,12 @@ function send() {
     check_button = "<br><br><button class='btn btn-info' onclick='check()'>Check</button>";
     row = question_word + input_box + check_button;
     document.getElementById("output").innerHTML = row;
-    document.getElementById("word").value = "";
+   document.getElementById("word1").value = "";
+    document.getElementById("word2").value = "";
 }
+
+question_turn="player1";
+ answer_turn="player2";
 
 function check() {
  get_answer = document.getElementById("input_check_box").value;
@@ -39,8 +43,7 @@ if (get_answer == actual_answer) {
         player2_score = player2_score + 1;
         document.getElementById("player2_score").innerHTML=player2_score;
     }
- question_turn="player1";
- answer_turn="player2";
+ 
 
 }
 if (question_turn == "player1") {
