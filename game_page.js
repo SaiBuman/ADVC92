@@ -4,10 +4,6 @@ player2_name = localStorage.getItem("Player_2");
 player1_score = 0;
 player2_score = 0;
 
-number_1 = document.getElementById("word1").value;
-number_2 = document.getElementById("word2").value;
-actual_answer = parseInt(number_1) * parseInt(number_2)
-
 document.getElementById("player1_name").innerHTML = player1_name + ":";
 document.getElementById("player2_name").innerHTML = player2_name + ":";
 
@@ -23,8 +19,12 @@ function send() {
     check_button = "<br><br><button class='btn btn-info' onclick='check()'>Check</button>";
     row = question_word + input_box + check_button;
     document.getElementById("output").innerHTML = row;
-   document.getElementById("word1").value = "";
+    document.getElementById("word1").value = "";
     document.getElementById("word2").value = "";
+    
+    number_1 = document.getElementById("word1").value;
+    number_2 = document.getElementById("word2").value;
+    actual_answer = parseInt(number_1) * parseInt(number_2);
 }
 
 question_turn="player1";
