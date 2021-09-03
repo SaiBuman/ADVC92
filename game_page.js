@@ -14,17 +14,19 @@ document.getElementById("player_question").innerHTML ="Question Turn : " +player
 document.getElementById("player_answer").innerHTML = "Answer Turn : " +player2_name;
 
 function send() {
+    
+    number_1 = document.getElementById("word1").value;
+    number_2 = document.getElementById("word2").value;
+    actual_answer = parseInt(number_1) * parseInt(number_2);
+    
     question_word = "<h4 id='word_display'>Q. " + document.getElementById("word1").value + " X " +document.getElementById("word2").value + "</h4>";
     input_box = "<br>Answer : <input type='number' id='input_check_box'>";
     check_button = "<br><br><button class='btn btn-info' onclick='check()'>Check</button>";
     row = question_word + input_box + check_button;
     document.getElementById("output").innerHTML = row;
     document.getElementById("word1").value = "";
-    document.getElementById("word2").value = "";
+    document.getElementById("word2").value = "";   
     
-    number_1 = document.getElementById("word1").value;
-    number_2 = document.getElementById("word2").value;
-    actual_answer = parseInt(number_1) * parseInt(number_2);
 }
 
 question_turn="player1";
